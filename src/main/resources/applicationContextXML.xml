@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+	<bean id="empleadoDAO" class="es.curso.examen.dao.EmpleadoDAO">
+	</bean>
+	<bean id="empleado" class="es.curso.examen.modelo.Empleado">
+		<property name="codigo" value="0001"></property>
+		<property name="nombre" ref="Mikel"></property>
+		<property name="perfil" ref="mikelgmh"></property>
+		<property name="empresa" ref="Capgemini"></property>
+	</bean>
+
+	<bean id="ficherosLog" class="es.curso.examen.logs.FicherosLog"></bean>
+
+	<bean id="log" class="es.curso.examen.modelo.Log"></bean>
+
+	<aop:config>
+		<aop:aspect ref="log">
+
+			<aop:pointcut
+				expression="execution(* es.curso.examen.modelo.IEmpleado.create(es.curso.examen.modelo.Empleado))"
+				id="pc_create" />
+			<aop:pointcut
+				expression="execution(* es.curso.examen.modelo.IEmpleado.delete(..))"
+				id="pc_delete" />
+			<aop:pointcut
+				expression="execution(* es.curso.examen.modelo.IEmpleado.update(es.curso.examen.modelo.Empleado))"
+				id="pc_update" />
+
+			<aop:before method="createUsuario"
+				pointcut-ref="pc_create" />
+			<aop:before method="deleteUsuario"
+				pointcut-ref="pc_delete" />
+			<aop:before method="updateUsuario"
+				pointcut-ref="pc_update" />
+
+		</aop:aspect>
+	</aop:config>
+
+</beans>
