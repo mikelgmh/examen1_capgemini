@@ -13,6 +13,7 @@ public class Application {
 	public static void main(String[] args) {
 		ejemploGrabarEnElLog();
 		pruebaConXML();
+
 		//pruebaConAnotaciones();
 	}
 
@@ -21,41 +22,41 @@ public class Application {
 		// FicherosLog
 
 		// Grabamos una linea en el fichero de Log:
-		/*
-		 * FicherosLog.grabarLog("contenido de la linea de log", "src/logs/mi_log.txt");
-		 * FicherosLog.grabarLog("Otra linea de log", "src/logs/mi_log.txt");
-		 * FicherosLog.grabarLog("Una tercera linea de log", "src/logs/mi_log.txt");
-		 */
+		
+		  FicherosLog.grabarLog("contenido de la linea de log", "src/logs/mi_log.txt");
+		  FicherosLog.grabarLog("Otra linea de log", "src/logs/mi_log.txt");
+		  FicherosLog.grabarLog("Una tercera linea de log", "src/logs/mi_log.txt");
+		 
 	}
 
 	private static void pruebaConAnotaciones() {
 		ApplicationContext context;
 		context = new FileSystemXmlApplicationContext("classpath:applicationContextAnnotations.xml");
-		
-		IEmpleadoDAO iEmpleadoDAO = (IEmpleadoDAO) context.getBean("empleadodao");
+
+		IEmpleadoDAO iEmpleadoDAO = (IEmpleadoDAO) context.getBean("empleadoDAO");
 		Empleado empleado = new Empleado(0001, "Empleado1", "Capgemini", "Perfil1");
-		
+
 		// CRUD
 		iEmpleadoDAO.create(empleado);
 		iEmpleadoDAO.delete(0001);
 		iEmpleadoDAO.update(empleado);
-		
+
 		((FileSystemXmlApplicationContext) context).close();
 
 	}
 
 	private static void pruebaConXML() {
 		ApplicationContext context;
-		context = new FileSystemXmlApplicationContext("classpath:applicationContextAnnotations.xml");
-		
-		IEmpleadoDAO iEmpleadoDAO = (IEmpleadoDAO) context.getBean("empleadodao");
+		context = new FileSystemXmlApplicationContext("classpath:applicationContextXML.xml");
+
+		IEmpleadoDAO iEmpleadoDAO = (IEmpleadoDAO) context.getBean("empleadoDAO");
 		Empleado empleado = new Empleado(0001, "Empleado1", "Capgemini", "Perfil1");
-		
+
 		// CRUD
 		iEmpleadoDAO.create(empleado);
 		iEmpleadoDAO.delete(0001);
 		iEmpleadoDAO.update(empleado);
-		
+
 		((FileSystemXmlApplicationContext) context).close();
 
 	}

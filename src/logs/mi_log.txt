@@ -1,3 +1,66 @@
-07/07/2021 17:52:40.906	contenido de la linea de log
-07/07/2021 17:52:40.907	Otra linea de log
-07/07/2021 17:52:40.908	Una tercera linea de log
+09/07/2021 10:19:35.724	contenido de la linea de log
+09/07/2021 10:19:35.726	Otra linea de log
+09/07/2021 10:19:35.726	Una tercera linea de log
+09/07/2021 10:19:57.418	contenido de la linea de log
+09/07/2021 10:19:57.420	Otra linea de log
+09/07/2021 10:19:57.421	Una tercera linea de log
+09/07/2021 10:19:58.276	Usuario creado: Empleado [codigo=1, nombre=Empleado1, empresa=Capgemini, perfil=Perfil1]
+09/07/2021 10:19:58.287	Usuario eliminado: 1
+09/07/2021 10:19:58.289	Usuario actualizado: Empleado [codigo=1, nombre=Empleado1, empresa=Capgemini, perfil=Perfil1]
+09/07/2021 10:20:27.357	contenido de la linea de log
+09/07/2021 10:20:27.358	Otra linea de log
+09/07/2021 10:20:27.359	Una tercera linea de log
+09/07/2021 10:21:59.289	contenido de la linea de log
+09/07/2021 10:21:59.290	Otra linea de log
+09/07/2021 10:21:59.291	Una tercera linea de log
+09/07/2021 10:22:35.871	contenido de la linea de log
+09/07/2021 10:22:35.873	Otra linea de log
+09/07/2021 10:22:35.874	Una tercera linea de log
+09/07/2021 10:22:46.415	contenido de la linea de log
+09/07/2021 10:22:46.418	Otra linea de log
+09/07/2021 10:22:46.419	Una tercera linea de log
+09/07/2021 10:22:47.673	Usuario creado: Empleado [codigo=1, nombre=Empleado1, empresa=Capgemini, perfil=Perfil1]
+09/07/2021 10:22:47.675	Usuario eliminado: 1
+09/07/2021 10:22:47.676	Usuario actualizado: Empleado [codigo=1, nombre=Empleado1, empresa=Capgemini, perfil=Perfil1]
+09/07/2021 10:25:03.908	contenido de la linea de log
+09/07/2021 10:25:03.910	Otra linea de log
+09/07/2021 10:25:03.911	Una tercera linea de log
+09/07/2021 10:25:15.253	contenido de la linea de log
+09/07/2021 10:25:15.254	Otra linea de log
+09/07/2021 10:25:15.255	Una tercera linea de log
+09/07/2021 10:25:16.99	Usuario creado: Empleado [codigo=1, nombre=Empleado1, empresa=Capgemini, perfil=Perfil1]
+09/07/2021 10:25:16.100	Usuario eliminado: 1
+09/07/2021 10:25:16.102	Usuario actualizado: Empleado [codigo=1, nombre=Empleado1, empresa=Capgemini, perfil=Perfil1]
+09/07/2021 10:25:44.576	contenido de la linea de log
+09/07/2021 10:25:44.577	Otra linea de log
+09/07/2021 10:25:44.578	Una tercera linea de log
+09/07/2021 10:26:07.110	contenido de la linea de log
+09/07/2021 10:26:07.111	Otra linea de log
+09/07/2021 10:26:07.112	Una tercera linea de log
+09/07/2021 10:26:15.854	contenido de la linea de log
+09/07/2021 10:26:15.856	Otra linea de log
+09/07/2021 10:26:15.857	Una tercera linea de log
+09/07/2021 10:28:51.717	contenido de la linea de log
+09/07/2021 10:28:51.719	Otra linea de log
+09/07/2021 10:28:51.720	Una tercera linea de log
+09/07/2021 10:29:09.50	contenido de la linea de log
+09/07/2021 10:29:09.51	Otra linea de log
+09/07/2021 10:29:09.52	Una tercera linea de log
+09/07/2021 10:29:09.867	Usuario creado: Empleado [codigo=1, nombre=Empleado1, empresa=Capgemini, perfil=Perfil1]
+09/07/2021 10:29:09.868	Usuario eliminado: 1
+09/07/2021 10:29:09.870	Usuario actualizado: Empleado [codigo=1, nombre=Empleado1, empresa=Capgemini, perfil=Perfil1]
+09/07/2021 10:31:07.682	contenido de la linea de log
+09/07/2021 10:31:07.684	Otra linea de log
+09/07/2021 10:31:07.685	Una tercera linea de log
+09/07/2021 10:33:10.313	contenido de la linea de log
+09/07/2021 10:33:10.315	Otra linea de log
+09/07/2021 10:33:10.315	Una tercera linea de log
+09/07/2021 10:33:45.732	contenido de la linea de log
+09/07/2021 10:33:45.735	Otra linea de log
+09/07/2021 10:33:45.736	Una tercera linea de log
+09/07/2021 10:34:06.601	contenido de la linea de log
+09/07/2021 10:34:06.603	Otra linea de log
+09/07/2021 10:34:06.603	Una tercera linea de log
+09/07/2021 10:34:07.331	Usuario creado: Empleado [codigo=1, nombre=Empleado1, empresa=Capgemini, perfil=Perfil1]
+09/07/2021 10:34:07.332	Usuario eliminado: 1
+09/07/2021 10:34:07.333	Usuario actualizado: Empleado [codigo=1, nombre=Empleado1, empresa=Capgemini, perfil=Perfil1]

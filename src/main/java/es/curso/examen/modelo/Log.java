@@ -1,54 +1,64 @@
 package es.curso.examen.modelo;
 
-import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
 import es.curso.examen.logs.FicherosLog;
 
-@Component
 @Aspect
 public class Log implements ILog {
 
-	@Autowired(required = false)
+	@Autowired
 	private Empleado empleado;
-
-	public Log() {
-		super();
-	}
 
 	public Log(Empleado empleado) {
 		super();
 		this.empleado = empleado;
 	}
 
-	@Pointcut(value = "execution(* es.curso.examen.modelo.IEmpleado.create(es.curso.examen.modelo.Empleado))")
+	public Empleado getEmpleado() {
+		return empleado;
+	}
+
+	public void setEmpleado(Empleado empleado) {
+		this.empleado = empleado;
+	}
+
+	public Log() {
+		super();
+	}
+
+	@Pointcut(value = "execution(* es.curso.examen.dao.IEmpleadoDAO.create(es.curso.examen.modelo.Empleado)) && args(empleado)")
 	public void pointCutCreate(Empleado empleado) {
 	};
 
-	@Pointcut(value = "execution(* es.curso.examen.modelo.IEmpleado.delete(..))")
+	@Pointcut(value = "execution(* es.curso.examen.dao.IEmpleadoDAO.delete(int)) && args(codigo)")
 	public void pointCutDelete(int id) {
 	};
 
-	@Pointcut(value = "execution(* es.curso.examen.modelo.IEmpleado.create(es.curso.examen.modelo.Empleado))")
+	@Pointcut(value = "execution(* es.curso.examen.dao.IEmpleadoDAO.update(es.curso.examen.modelo.Empleado)) && args(empleado)")
 	public void pointCutUpdate(Empleado empleado) {
 	};
 
-	@After("pointCutCreate(empleado)")
-	public void createUsuario() {
+	@AfterReturning("pointCutCreate(empleado)")
+	@Override
+	public void createUsuario(Empleado empleado) {
+		System.out.println("Nueva línea en el log");
 		FicherosLog.grabarLog("Usuario creado: " + empleado.toString(), "src/logs/mi_log.txt");
 	}
 
-	@After("pointCutDelete(empleado)")
-	public void deleteUsuario() {
-		FicherosLog.grabarLog("Usuario eliminado: " + empleado.toString(), "src/logs/mi_log.txt");
+	@AfterReturning("pointCutDelete(id)")
+	@Override
+	public void deleteUsuario(int empleado) {
+		System.out.println("Nueva línea en el log");
+		FicherosLog.grabarLog("Usuario eliminado: " + empleado, "src/logs/mi_log.txt");
 	}
 
-	@After("pointCutUpdate(empleado)")
-	public void updateUsuario() {
+	@AfterReturning("pointCutUpdate(empleado)")
+	@Override
+	public void updateUsuario(Empleado empleado) {
+		System.out.println("Nueva línea en el log");
 		FicherosLog.grabarLog("Usuario actualizado: " + empleado.toString(), "src/logs/mi_log.txt");
 	}
 

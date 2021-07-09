@@ -7,6 +7,13 @@ import es.curso.examen.modelo.Empleado;
 
 @Component
 public class EmpleadoDAO implements IEmpleadoDAO {
+	
+	
+
+	public EmpleadoDAO() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	@Override
 	public void create(Empleado e) {
